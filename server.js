@@ -1,13 +1,10 @@
 var express = require("express");
-var logger = require("morgan");
 var mongoose = require("mongoose");
 var exphbs = require("express-handlebars");
 var ObjectId = require("mongodb").ObjectID;
-// Scrapping tools
+var logger = require("morgan");
 var axios = require("axios");
 var cheerio = require("cheerio");
-
-// Require models
 var db = require("./models");
 
 // Set up port
@@ -176,7 +173,7 @@ app.post("/api/articles/:id", function (req, res) {
 
 
 // Connect to Mongo
-var MONGODB_URI = (process.env.MONGODB_URI || "mongodb://localhost/newsscraper");
+var MONGODB_URI = (process.env.MONGODB_URI || "mmongodb://user1:password1@ds017185.mlab.com:17185/heroku_69ctt0jg");
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 
